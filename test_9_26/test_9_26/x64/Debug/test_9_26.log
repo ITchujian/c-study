@@ -1,2 +1,4 @@
 ﻿  test.c
-  test_9_26.vcxproj -> E:\Users\QinYu6\source\repos\test_9_26\x64\Debug\test_9_26.exe
+E:\Users\QinYu6\source\repos\test_9_26\test_9_26\test.c(148,6): error C2143: 语法错误: 缺少“;”(在“do”的前面)
+E:\Users\QinYu6\source\repos\test_9_26\test_9_26\test.c(148,6): warning C4091: “ ”: 没有声明变量时忽略“int”的左侧
+E:\Users\QinYu6\source\repos\test_9_26\test_9_26\test.c(148,9): error C2143: 语法错误: 缺少“;”(在“=”的前面)
