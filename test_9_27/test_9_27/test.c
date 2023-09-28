@@ -78,3 +78,70 @@
 //
 //	return 0;
 //}
+
+
+//指针
+//int main() {
+//	int a = 10; // 向内存申请4个字节存储10
+//	//&a; // 取地址操作符
+//	printf("%p\n", &a);
+//	int* p = &a; // p就是指针变量 （*号是指针变量的标志 int说明p指向的对象是int类型的）
+//	//地址也就是指针
+//	//存放地址的变量就是指针变量
+//	printf("%p\n", p);
+//	char ch = 'w';
+//	char* pc = &ch;
+//	// *pc; // 解引用操作符 意思是通过pc中存放的地址，找到p指向的对象，*pc就是pc指向的对象ch 
+//	printf("%c\n", *pc);
+//	return 0;
+//}
+
+//int main() {
+//	// int* p;
+//	// char* p2;
+//	//不管是什么类型的指针,都是在创建指针变量
+//	//指针变量用来存放地址的
+//	//指针变量的大小取决于一个地址存放的时候需要多大空间
+//	//32位机器 4字节
+//	//64位机器 8字节
+//	printf("%lld\n", sizeof(char*));
+//	printf("%zu\n", sizeof(int*));
+//	return 0;
+//}
+
+//int main() {
+//	char* pc;
+//	char* p;
+//	int* p1, * p2, p3;
+//	return 0;
+//}
+
+// char short int long longlong float double
+// 人:名字 年龄 性别 地址 电话
+// 书:书名 作者 出版社 定价 书号
+// 复杂对象 -- 自定义类型 -- 结构体
+// 结构体是把单一类型组合在一起的做法
+struct Stu { // 学生
+	// 成员
+	char name[20];
+	short age;
+	char sex[20];
+	char tele[12];
+};
+
+void print(struct Stu* stu) {
+	//printf("%s %d %s %s\n", (stu).name, (stu).age, (stu).sex, (stu).tele);
+	//printf("%s %d %s %s\n", (*stu).name, (*stu).age, (*stu).sex, (*stu).tele);
+	printf("%s %d %s %s\n", stu->name, stu->age, stu->sex, stu->tele);
+	// -> 
+	// 结构体指针变量->成员名
+}
+
+int main() {
+	struct Stu zs = { "张三", 20, "男", "15741323333" };
+	// 结构体对象.成员名
+	//printf("%s %d %s %s\n", zs.name, zs.age, zs.sex, zs.tele);
+	//print(zs);
+	print(&zs);
+	return 0;
+}
